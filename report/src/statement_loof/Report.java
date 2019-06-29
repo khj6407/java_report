@@ -3,12 +3,12 @@ package statement_loof;
 public class Report {
 	
 	public static void main(String[] args) {
-		//1+(1+2)+(1+2+3)+(1+2+3+4)+...+(1+2+3+...+10)
 	
 		
 		
 		
-	  } // end of class
+		
+	  } // end of main
 	
 
 	/*
@@ -109,7 +109,23 @@ public class Report {
 			
 		      
 	      [4-4] 1+(1+2)+(1+2+3)+(1+2+3+4)+...+(1+2+3+...+10) . 의 결과를 계산하시오.
-	      
+	 
+			public static void main(String[] args) {
+			
+			int res = 0;
+			int maxCnt = 11;
+			
+			for(int i = 1; i < maxCnt; i++) {
+				
+				for(int j = 1; j <= i; j++) {
+					res += j;
+				}
+				
+			}		
+			
+			System.out.println(res);
+			 
+		  } // end of main
 	      
 	      [4-5] 다음의 for 문을 while문으로 변경하시오  .
 	      ----------------------------------------------------------------
@@ -128,8 +144,18 @@ public class Report {
 	      
 	      
 	      [4-6] 두 개의 주사위를 던졌을 때 눈의 합이 6 이 되는 모든 경우의 수를 출력하는 프로그램을 작성하시오.
-	      
-	      
+		      
+		      public static void main(String[] args) {
+			
+			for(int i = 1; i <7; i++) {
+				for(int j = 6; j > 0; j--) {
+					if((i + j) == 6) {
+						System.out.println(i + "," + j);
+					}
+				}
+			}
+		
+		  } // end of main
 	      
 	      [4-7] Math.random() 을 이용해서  1부터  6사이의 임의의 정수를 변수 value에 저장하는
 	      코드를 완성하라 에 알맞은 코드를 넣으시오 . 
